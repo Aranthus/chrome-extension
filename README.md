@@ -1,52 +1,59 @@
 # Grammar Corrector Chrome Extension
 
-Bu Chrome uzantısı, herhangi bir web sitesinde yazdığınız metinlerin dilbilgisini ChatGPT veya Google Gemini yardımıyla düzeltmenizi sağlar.
+This Chrome extension allows you to correct the grammar of any text you write on websites using ChatGPT, Google Gemini, or Deepseek AI.
 
-## Özellikler
+## Features
 
-- Herhangi bir web sitesinde çalışır (Twitter, Facebook, Gmail vb.)
-- Düzeltilecek metni seçerek (highlight) kullanabilirsiniz
-- Seçilen metni OpenAI ChatGPT veya Google Gemini API kullanarak düzeltir
-- Kullanımı kolay arayüz
+- Works on any website (Twitter, Facebook, Gmail, etc.)
+- Simply select (highlight) text to correct it
+- Modern, user-friendly interface with draggable correction modal
+- Supports multiple AI providers:
+  - OpenAI (ChatGPT)
+  - Google Gemini
+  - Deepseek AI
+- Elegant "Correct" button with ripple animation effect
+- Responsive design that adapts to content length
 
-## Kurulum
+## Installation
 
-1. Bu repository'yi bilgisayarınıza indirin
-2. Chrome tarayıcınızı açın ve `chrome://extensions` adresine gidin
-3. Sağ üst köşedeki "Geliştirici modu"nu etkinleştirin
-4. "Paketlenmemiş öğe yükle" butonuna tıklayın
-5. İndirdiğiniz klasörü seçin
+1. Clone or download this repository
+2. Open Chrome and navigate to `chrome://extensions`
+3. Enable "Developer mode" in the top-right corner
+4. Click "Load unpacked extension"
+5. Select the downloaded folder
 
-## Kullanım
+## Usage
 
-1. API anahtarınızı uzantı ayarlarına girin:
-   - Uzantı simgesine tıklayın
-   - API tipini seçin (OpenAI veya Gemini)
-   - İlgili API anahtarınızı girin ve "API Anahtarını Kaydet" butonuna tıklayın
-2. Herhangi bir web sitesinde düzeltmek istediğiniz metni seçin (mavi ile vurgulayın)
-3. Beliren "Correct Grammar" (Dilbilgisini Düzelt) butonuna tıklayın
-4. Metin otomatik olarak düzeltilecektir
+1. Enter your API key in the extension settings:
+   - Click the extension icon
+   - Select your preferred API type (OpenAI, Gemini, or Deepseek)
+   - Enter your API key and click "Save API Key"
+2. Select any text you want to correct on any website
+3. Click the "Correct" button that appears
+4. The corrected text will be displayed in a modal window
+5. You can copy the corrected text and paste it wherever you need
 
-## Gereksinimler
+## Requirements
 
-- Google Chrome tarayıcısı
-- API anahtarı:
-  - OpenAI API anahtarı ([OpenAI](https://platform.openai.com/account/api-keys) üzerinden alabilirsiniz)
-  - Veya Google Gemini API anahtarı ([Google AI](https://ai.google.dev) üzerinden alabilirsiniz)
+- Google Chrome browser
+- An API key from one of these providers:
+  - OpenAI API key (get it from [OpenAI](https://platform.openai.com/account/api-keys))
+  - Google Gemini API key (get it from [Google AI](https://ai.google.dev))
+  - Deepseek API key (get it from [Deepseek](https://platform.deepseek.com))
 
-## Notlar
+## Notes
 
-- Bu uzantı, API kullanım kurallarına uygun olarak kullanılmalıdır
-- API çağrıları, kredi/kullanım limitinizi kullanacaktır
-- Uzantı, API anahtarlarınızı yerel tarayıcı depolamanızda saklar ve başka bir yere göndermez
+- Please use this extension in accordance with API usage policies
+- API calls will count against your credit/usage limits
+- This extension stores your API keys locally in your browser storage and does not send them elsewhere
 
-## İkon Oluşturma
+## Icon Generation
 
-Extension için gerekli ikonları oluşturmak için:
+To generate the required icons for the extension:
 
-1. `images/create_icons.html` dosyasını tarayıcınızda açın
-2. Her boyuttaki ikon için "İndir" butonuna tıklayın
-3. İndirilen ikonları `images` klasörüne aşağıdaki adlarla kaydedin:
+1. Open `images/create_icons.html` in your browser
+2. Click the "Download" button for each icon size
+3. Save the downloaded icons to the `images` folder with the following names:
    - icon16.png
    - icon48.png
    - icon128.png
