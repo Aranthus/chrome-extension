@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grammar Corrector</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    h1 {
+      color: #4285f4;
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    
+    select, input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .api-key-container {
+      margin-bottom: 15px;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #3367d6;
+    }
+    
+    .status {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #d4edda;
+      color: #155724;
+      display: none;
+    }
+    
+    .instructions {
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+    }
+    
+    .instructions h2 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    
+    .instructions ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .instructions li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .footer a {
+      color: #4285f4;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Grammar Corrector</h1>
+
+  <label for="apiType">API Type:</label>
+  <select id="apiType">
+    <option value="openai">OpenAI</option>
+    <option value="gemini">Google Gemini</option>
+    <option value="deepseek">Deepseek</option>
+  </select>
+
+  <div id="openaiSection" class="api-key-container">
+    <label for="openaiKey">OpenAI API Key:</label>
+    <input type="password" id="openaiKey" placeholder="Enter your OpenAI API key">
+  </div>
+
+  <div id="geminiSection" class="api-key-container hidden">
+    <label for="geminiKey">Google Gemini API Key:</label>
+    <input type="password" id="geminiKey" placeholder="Enter your Google Gemini API key">
+  </div>
+
+  <div id="deepseekSection" class="api-key-container hidden">
+    <label for="deepseekKey">Deepseek API Key:</label>
+    <input type="password" id="deepseekKey" placeholder="Enter your Deepseek API key">
+  </div>
+
+  <button id="saveButton">Save API Key</button>
+  
+  <div id="status" class="status">API key saved successfully!</div>
+
+  <div class="instructions">
+    <h2>How to use:</h2>
+    <ol>
+      <li>Select the text you want to correct</li>
+      <li>Click the "Fix" button that appears</li>
+      <li>The text will be automatically corrected</li>
+    </ol>
+    <p>This extension requires an API key to function.</p>
+  </div>
+
+  <div class="footer">
+    Get API keys from: <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI</a> | <a href="https://ai.google.dev/" target="_blank">Google AI</a> | <a href="https://platform.deepseek.com/" target="_blank">Deepseek</a>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
